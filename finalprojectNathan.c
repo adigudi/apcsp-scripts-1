@@ -6,21 +6,9 @@ void averageGrade(struct Student* student)
     int n, i;
     float num[100], sum = 0.0, average;
 
-    printf("Enter the numbers of grades: ");
-    scanf("%d", &n);
-
-    while (n > 100 || n <= 0)
-    {
-        printf("Error! grade should in range of (1 to 100).\n");
-        printf("Enter the grade again: ");
-        scanf("%d", &n);
-    }
-
     for(i = 0; i < n; ++i)
     {
-        printf("%d. Enter grade: ", i+1);
-        scanf("%f", &num[i]);
-        sum += num[i];
+        sum = sum + &students[i].gradepercent;
     }
 
     average = sum / n;
