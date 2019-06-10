@@ -18,8 +18,10 @@
          $arg2 = test_input($_POST["arg2"]);
          $arg3 = test_input($_POST["arg3"]);
          $arg4 = test_input($_POST["arg4"]);
-	 $arg5 = test_input($_POST["arg5"]);
-         exec("/usr/lib/cgi-bin/pi/finalproject " . $arg1 . " " . $arg2 . " " . $arg3 .  " " . $arg4 . " " . $arg5, $output, $retc); 
+	 $arg5 = test_input($_POST["arg5"]);       
+          exec("/Users/adigudi/apcsp-final/apcsp-scripts-1/finalproject " . $arg1 . " " . $arg2 . " " . $arg3 .  " " . $arg4 . " " . $arg5, $output, $retc);
+    //"/usr/lib/cgi-bin/pi/finalproject "
+ 
        }
        function test_input($data) {
          $data = trim($data);
@@ -29,7 +31,7 @@
        }
     ?>
 
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
       First Name: <input type="text" name="arg1"><br>
       Last Name: <input type="text" name="arg2"><br>
       Student ID: <input type="text" name="arg3"><br>
