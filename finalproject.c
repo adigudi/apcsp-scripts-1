@@ -43,7 +43,6 @@ int main()
       b = TRUE;
       char firstname[100];
       char lastname[100];
-      int age;
       int sID;
       float gradePercent;
       float totalscore;

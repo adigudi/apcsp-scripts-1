@@ -3,18 +3,19 @@
 #include <string.h>
 #include <stdlib.h>
 #include "finalprojectNathan.h"
+#include "finalprojectNathan.c"
 #define TRUE 0
 #define FALSE 1
 
 
 void printStudent(struct Student* student)
 {
-  printf("\nFirst Name: %s\n", student->firstname);
-  printf("Last Name: %s\n", student->lastname);
-  printf("Student ID: %d\n", student->sid);
-  printf("Total Value of Assignment: %f\n", student->totalscore); 
-  printf("Student Score: %f\n", student->scoreearned);
-  printf("Grade Percent: %f\n", student->gradePercent);
+ printf("\nFirst Name: %s\n", student->firstname);
+ printf("Last Name: %s\n", student->lastname);
+ printf("Student ID: %d\n", student->sid);
+ printf("Total Value of Assignment: %f\n", student->totalscore); 
+ printf("Student Score: %f\n", student->scoreearned);
+ printf("Grade Percent: %f\n", student->gradePercent);
 }
 
 int main()
@@ -68,12 +69,13 @@ int main()
       b = FALSE;
       for (int i = 0; i < count; i++)
       {
-	printf("\nFirst Name: %s\n", (*students).firstname);
-	printf("Last Name: %s\n", (*students).lastname);
-	printf("Student ID: %d\n", (*students).sid);
-	printf("Total Value of Assignment: %f\n", (*students).totalscore);
-	printf("Student Score: %f\n", (*students).scoreearned);
-	printf("Grade Percent: %f\n", (*students).gradePercent);
+	//printf("\nFirst Name: %s\n", (*students).firstname);
+	//printf("Last Name: %s\n", (*students).lastname);
+	//printf("Student ID: %d\n", (*students).sid);
+	//printf("Total Value of Assignment: %f\n", (*students).totalscore);
+	//printf("Student Score: %f\n", (*students).scoreearned);
+	//printf("Grade Percent: %f\n", (*students).gradePercent);
+	printStudent(&students[i]);
       }
 	averageGrade(students);
     }

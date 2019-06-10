@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "finalprojectNathan.h"
+//#include "finalprojectNathan.h"
  
 void averageGrade(struct Student* student)
 {
@@ -24,7 +24,7 @@ void averageGrade(struct Student* student)
     }
 
     average = sum / n;
-    if(average >= 90 && average < 100)
+    if((average >= 90 && average <= 100) || average > 100)
     {
 	printf("Grade: A\n");
     }
@@ -43,5 +43,5 @@ void averageGrade(struct Student* student)
     if(average < 60){
 	printf("Grade: F\n");
     }
-    printf("Average = %.2f", average);
+    printf("Average = %.2f\n", average);
 }
